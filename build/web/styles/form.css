@@ -1,0 +1,108 @@
+/* 
+    Document   : form
+    Created on : Mar 19, 2011, 11:54:25 PM
+    Author     : Vinnu
+    Description: Purpose of the stylesheet follows.
+*/
+
+
+
+
+.content form h1 {
+    font-size: 2em;
+    font-family: "Arial Black", Arial, sans-serif;
+    color: gray;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    text-align: center;
+    border-bottom: 1px dashed darkblue;
+    border-top: 1px dashed darkblue;
+    clear: both;
+    line-height: normal;
+}
+.content form h2 {
+    font-size: 1.3em;
+    font-family: "Arial Black", Arial, sans-serif;
+    color: gray;
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed darkblue;
+    border-top: 1px dashed darkblue;
+    border-left: 15px solid gray;
+    clear: both;
+    line-height: normal;
+
+}
+
+.content form input[type='text']:focus,
+.content form input[type='password']:focus {
+    background: #ffcc66;
+    color: red;
+    border: 2px groove #00B;
+}
+
+.content form label {
+    float: left;
+    width: 200px;
+    margin-right: 10px;
+    text-align: right;
+    font-weight: bold;
+    clear: left;
+}
+.content form p{
+    margin:0;
+    margin-left: 210px;
+}
+.content form p input {
+    margin: 10px;
+}
+#addrem{
+    margin-left: 85px;
+}
+.displaynone{
+    display:none;
+}
+#displayall{
+    display: table;
+}
+.content form {
+    border: 1px solid gray;
+    margin:50px;
+    padding:50px;
+    color: #3333ff;
+}
+.content form table{
+    color: #000;
+    border: 1px solid gray;
+    margin-left: 85px;
+    margin-bottom: 20px;
+}
+.content form table th{
+    font:.8em Verdana;
+    padding: 10px;
+    border: 1px solid gray;
+    font-weight: bold;
+}
+.content form table td{
+    border: 1px solid gray;
+    padding: 10px;
+}
+.content form table#sub th,.content form table th{
+    background: #FFF;
+}
+
+.content form table#sub td,.content form table td{
+    background: #ECECFF;
+}
+.content form div{
+    border: 1px solid gainsboro;
+    padding: 0;
+    margin: 0;
+}
+.content form div iframe{
+    width: 100%;
+    border: 0;
+}

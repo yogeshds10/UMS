@@ -1,0 +1,148 @@
+/* 
+    Document   : main
+    Created on : Mar 17, 2011, 2:12:07 PM
+    Author     : Vinnu
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+/* reset browser styles */
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, variable, form, fieldset, blockquote {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    font-weight: normal;
+}
+ol {
+    margin-left: 1.4em;
+    list-style: decimal;
+}
+ul {
+    margin-left: 1.4em;
+    list-style:square;
+}
+img {
+    border: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td, th, caption {
+    font-weight: normal;
+    text-align: left;
+}
+q:before, q:after {
+    content:'';
+}
+/* end reset browser styles */
+
+#body {
+    background-position: center;
+    width: 900px;
+    background-color: #ccccff;
+    border: 5px double #3333ff;
+    margin: 0 auto;
+}
+
+#header {
+    font-size: 3em;
+    border-bottom: 5px solid #3333ff;
+    margin-bottom: 10px;
+    padding-bottom: 50px;
+    margin-top: 30px;
+}
+#header img {
+    width: 100px;
+    margin-left:10px;
+    margin-top: -20px;
+    margin-right: 100px;
+    float:left;
+    height: 100px;
+    border: 5px solid grey;
+}
+
+.content p {
+    margin:50px;
+    font-size: 1.1em;
+    font-family: Verdana, serif;
+    color:#00B;
+}
+
+.content {
+    font-size: 1em;
+}
+
+
+.content ul {
+    font-family: Gill, Helvetica, sans-serif;
+    font-size: 2.2em;
+    border: 5px solid gray;
+    padding:10px 0 30px 50px;
+    margin: 50px;
+    margin-top: 10px;
+}
+
+
+.content h1 {
+    font-family: "Arial Black", Arial, sans-serif;
+    color: #33f;
+    font-size: 3em;
+    clear: both;
+    margin:50px;
+    margin-bottom: 10px;
+    line-height: .8em;
+}
+
+h2 {
+    font-family: "Arial Black", Arial, sans-serif;
+    color: #33f;
+    font-size: 2.2em;
+}
+#Menu{
+    margin: 20px;
+    margin-left: 50px;
+}
+
+div .extab{
+    margin:50px;
+    border: 1px solid gray;
+    padding:20px;
+}
+div .extab h1{
+    margin:0;
+    margin-bottom: 10px;
+    font-size: 2em;
+    text-align: center;
+    border-bottom: 1px dashed gray;
+    padding-bottom: 10px;
+}
+.content ol, .content dl{
+    margin-top: -50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding:20px;
+}
+.content dl{
+    margin-top: 0;
+}
+.content dl dt{
+    font-size: 1.2em;
+    color:red;
+    border-bottom: 1px solid #FFC;
+    margin: 5px;
+    margin-top: 10px;
+}
+.content dl dd{
+    margin-bottom: 20px;
+}
+#logout{
+    position: absolute;
+    top:5px;
+    right:5px;
+}
+#body{
+    position: relative;
+}

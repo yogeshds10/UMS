@@ -1,0 +1,39 @@
+/* 
+    Document   : NavMenu
+    Created on : Mar 19, 2011, 12:08:09 AM
+    Author     : Vinnu
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+#Menu{
+    padding-bottom: 20px;
+    margin-left: 30px;
+}
+#Menu ul {
+    list-style-type: none;
+}
+#Menu li {
+    float: left;
+}
+#Menu a {
+    text-decoration: none;
+    display:block;
+    border: 1px solid gray;
+}
+#Menu a:link, #Menu a:visited{
+    background-color: white;
+    padding:10px 20px 10px 20px;
+    font-family: "Palatino Linotype", Baskerville, serif;
+    font-weight: bold;
+    color: #3333ff;
+}
+
+#Menu a:hover{
+    background-color: gray;
+    padding:10px 20px 10px 20px;
+    font-family: "Palatino Linotype", Baskerville, serif;
+    color:white;
+    font-weight: bold;
+}

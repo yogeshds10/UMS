@@ -1,0 +1,102 @@
+<%-- 
+    Document   : ainssub
+    Created on : Mar 19, 2011, 11:52:21 AM
+    Author     : Vinnu
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>University Examination Cell  </title>
+        <link type="text/css" rel="stylesheet" href="styles/main.css" />
+        <link type="text/css" rel="stylesheet" href="styles/form.css" />
+        <link type="text/css" rel="stylesheet" href="styles/NavMenu.css" />
+        <link type="text/css" rel="stylesheet" href="styles/fonts-min.css" />
+        <script type="text/javascript" src="scripts/validation.js"></script>
+        <script type="text/javascript">
+            window.onload=function(){
+                var i=0;
+                document.getElementById('questions').className='displaynone';
+                document.getElementById('name').focus();             
+                document.getElementById('lab').onchange=function(){
+                    var x=document.createElement('input');
+                    x.type='button';
+                    x.value='Add Question';
+                    x.onclick=function(){
+                        t1=document.createElement('tr');
+                        t2=document.createElement('td');
+                        t2.textContent=++i;
+                        t1.appendChild(t2);
+                        t2=document.getElementById('input');
+                        t2.type='text'
+                        t2.id='question'+i;
+                        t2.name='question'+i;
+                        t2.size=60;
+                        
+                    }
+                    document.getElementById('para').appendChild(x);
+                    x=document.createElement('input');
+                    x.type='button';
+                    x.value='Remove Question';
+                    x.onclick=function(){
+                        alert('removing question');
+                    }
+                    document.getElementById('para').appendChild(x);
+                    document.getElementById('questions').className='displayall';
+                    
+                }
+                document.getElementById('theory').onchange=function(){
+                    document.getElementById('para').removeChild(document.getElementById('para').lastChild);
+                    document.getElementById('para').removeChild(document.getElementById('para').lastChild);
+                    document.getElementById('questions').className='displaynone';
+                }
+                document.getElementById('f1').onsubmit=function(){
+                    if(!validateNull(document.getElementById('name'))){return false;}
+                    if(!validateNull(document.getElementById('subdesc'))){return false;}
+                    if(!(document.getElementById('theory').checked||document.getElementById('lab').checked)){
+                        alert("Choose Subject type...!");
+                        document.getElementById('theory').focus();
+                    }               
+                    if(document.getElementById('lab').checked){return false;}
+                }       
+            }
+        </script>
+    </head>
+    <body id="body" >
+        <div id="header">
+            <img src="images/UEC.jpg" alt="Logo" />
+            University Examination Cell</div>
+        <div id="Menu">
+            <ul>
+                <li><a href="index.jsp">Home</a></li>
+                <li><a href="aview.jsp">View</a></li>
+                <li><a href="ainsert.jsp">Insert</a></li>
+                <li><a href="#">Update</a></li>
+                <li><a href="#">Delete</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <form action="InsertHandler?type=3" method="post" id="f1">
+                <h1>Insert Subject</h1><br/>
+                <label>Subject Name : </label><input type="text" id="name" name="subname" size="60" /><br/><br/> 
+                <label>Description : </label><input type="text" id="subdesc" name="subdesc" size="60" /><br/><br/>
+                <label>Type : </label><input type="radio" id="theory" name="subtype" value="theory" />Theory&nbsp;&nbsp;&nbsp;
+                <input type="radio" id="lab" name="subtype" value="Labo" />Laboratory<br/><br/>
+                <table border="2" id="questions">
+                    <tr>
+                        <th>No.</th>
+                        <th>Question</th>
+                    </tr>
+                </table>
+                <p id="para">
+                    <input type="submit" value="Submit"/>
+                    <input type="reset" value="Reset"/>
+                </p>
+            </form>
+        </div>
+    </body>
+</html>
